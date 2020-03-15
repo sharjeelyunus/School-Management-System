@@ -2,7 +2,7 @@ public class Student {
 
     private int id;
     private String name;
-    private int Class;
+    private int grade;
     private int feesPaid;
     private int feesTotal;
 
@@ -13,14 +13,14 @@ public class Student {
      * Fees paid initially is 0.
      * @param id id for the student: unique.
      * @param name name of the student.
-     * @param Class Class of the student.
+     * @param grade grade of the student.
      */
-    public Student(int id, String name, int Class){
+    public Student(int id, String name, int grade){
         this.feesPaid=0;
         this.feesTotal=50000;
         this.id=id;
         this.name=name;
-        this.Class=Class;
+        this.grade=grade;
 
     }
 
@@ -28,11 +28,11 @@ public class Student {
 
     /**
      * Used to update student's grade.
-     * @param Class new class of the student.
+     * @param grade new class of the student.
      */
 
-    private void setClass(int Class) {
-        this.Class=Class;
+    private void setgrade(int grade) {
+        this.grade=grade;
 
     }
 
@@ -47,4 +47,32 @@ public class Student {
         feesPaid+=fees;
 
     }
+
+    /**
+     * id of student.
+     * @return
+     */
+
+    public int getId(){
+        return id;
+    }
+
+    public String getName(){
+        return name;
+    }
+
+    public int getGrade(){
+        return grade;
+    }
+
+    public int getFeesPaid(){
+        return feesPaid;
+    }
+
+    public int getFeesTotal(){
+        return feesTotal;
+    }
+
+
+
 }
