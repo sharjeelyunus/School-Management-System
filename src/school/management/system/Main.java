@@ -5,46 +5,52 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        Teacher lizzy = new Teacher(1, "Lizzy", 500);
-        Teacher mellisa = new Teacher(2, "Mellisa", 700);
-        Teacher vanderhorn = new Teacher(3,"Vanderhorn", 600);
+        Teacher asifurrehman = new Teacher(1, "Asif ur Rehman", 500);
+        Teacher munawer = new Teacher(2, "Munawer", 700);
+        Teacher arshad = new Teacher(3,"Arshad", 600);
 
         List<Teacher> teacherList = new ArrayList<>();
-        teacherList.add(lizzy);
-        teacherList.add(mellisa);
-        teacherList.add(vanderhorn);
+        teacherList.add(asifurrehman);
+        teacherList.add(munawer);
+        teacherList.add(arshad);
 
-        Student tamasha = new Student(1, "Tamasha", 4);
-        Student rakashith = new Student(2, "Rakashith Vasudev", 12);
-        Student rabbi = new Student(3, "Rabbi", 5);
+        Student aadil = new Student(1, "Aadil", 4);
+        Student hamza = new Student(2, "Hamza", 12);
+        Student ali = new Student(3, "Ali", 5);
 
         List<Student> studentList = new ArrayList<>();
-        studentList.add(tamasha);
-        studentList.add(rakashith);
-        studentList.add(rabbi);
+        studentList.add(aadil);
+        studentList.add(hamza);
+        studentList.add(ali);
 
         School ghs = new School(teacherList,studentList);
 
-        tamasha.payFees(5000);
-        rakashith.payFees(6000);
-        System.out.println("GHS has earned $" + ghs.getTotalMoneyEarned());
+        System.out.println("----School is earning Money----");
+
+        aadil.payFees(5000);
+        System.out.println(aadil.getName() + " has paid fees.");
+        hamza.payFees(6000);
+        System.out.println(hamza.getName() + " has paid fees.");
+        ali.payFees(5500);
+        System.out.println(ali.getName() + " has paid fees.");
+
+        System.out.println("======School has earned $" + ghs.getTotalMoneyEarned() + "======");
 
         System.out.println("----Making School Pay Salary----");
 
-        lizzy.recieveSalary(lizzy.getSalary());
-        System.out.println("GHS has spent for salary to " + lizzy.getName()
-        + " and now has $" + ghs.getTotalMoneyEarned());
+        asifurrehman.recieveSalary(asifurrehman.getSalary());
+        System.out.println("GHS has spent for salary to " + asifurrehman.getName());
 
-        vanderhorn.recieveSalary(vanderhorn.getSalary());
-        System.out.println("GHS has spent for salary to " + vanderhorn.getName()
-                + " and now has $" + ghs.getTotalMoneyEarned());
+        arshad.recieveSalary(arshad.getSalary());
+        System.out.println("GHS has spent for salary to " + arshad.getName());
 
-        mellisa.recieveSalary(mellisa.getSalary());
-        System.out.println("GHS has spent for salary to " + mellisa.getName()
-                + " and now has $" + ghs.getTotalMoneyEarned());
+        munawer.recieveSalary(munawer.getSalary());
+        System.out.println("GHS has spent for salary to " + munawer.getName());
 
-        System.out.println(rakashith);
-        System.out.println(mellisa);
+        System.out.println("Total remaining Money $" +ghs.getTotalMoneyEarned());
+
+//        System.out.println(hamza);
+//        System.out.println(munawer);
 
     }
 }
